@@ -1,0 +1,19 @@
+﻿.video-title {
+    font-size: 23px !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+#leftDiv {
+    width: 70vw;
+    max-width: 1550px;
+}
+
+/*去广告*/
+.video-container-v1 #bannerAd {
+    display: none !important;
+}
+
+.reply-header .reply-notice {
+    display: none !important;
+}

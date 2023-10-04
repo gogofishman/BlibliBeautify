@@ -1,0 +1,12 @@
+﻿.video-container-v1 .right-container {
+    z-index: -20;
+    margin-left: 60px !important;
+}
+
+/*去广告*/
+.video-card-ad-small {
+    display: none !important;
+}
+#slide_ad{
+    display: none!important;
+}

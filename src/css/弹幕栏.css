@@ -1,0 +1,50 @@
+.bpx-player-sending-area:before {
+    display: none !important;
+}
+
+.bpx-player-sending-area {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.bpx-player-sending-bar {
+    width: 50vw !important;
+    background: rgba(20, 20, 20, 0.7) !important;
+    box-shadow: 0 2px 8px 5px rgba(20, 20, 20, 0.5) !important;
+    padding-left: 50px !important;
+    padding-right: 80px !important;
+    border-radius: 0 0 25px 25px !important;
+    z-index: 9999!important;
+}
+
+.bpx-player-video-info {
+    color: rgb(230, 230, 230) !important;
+}
+
+#sendingHover {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+}
+
+#sendingHover:hover .bpx-player-sending-area {
+    opacity: 1 !important;
+}
+
+/*变色*/
+.bpx-player-video-inputbar {
+    background: rgba(20, 20, 20, 0.9) !important;
+    border: 1.5px solid rgba(251, 114, 153, 0.5) !important;
+}
+
+.bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-input {
+    color: rgb(251, 114, 153) !important;
+}
+
+.bui-button .bui-area{
+    background-color: rgba(251, 114, 153, 0.8) !important;
+}

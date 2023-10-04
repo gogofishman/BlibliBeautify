@@ -1,0 +1,19 @@
+﻿.mini-header {
+    background-color: black !important;
+}
+
+.bili-header span {
+    color: white !important;
+}
+
+.mini-header .right-entry .right-entry__outside .right-entry-icon {
+    color: white !important;
+}
+
+.download-entry {
+    display: none !important;
+}
+
+.mini-header__arrow {
+    color: white !important;
+}
