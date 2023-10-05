@@ -17,18 +17,25 @@
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
+___CSS_LOADER_EXPORT___.push([module.id, `.showAni {
+    opacity: 1 !important;
+}
+
+body {
     overflow-x: hidden !important;
 }
 
+.video-container-v1 {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 2560px !important;
+    flex-wrap: wrap !important;
+}
+
 .video-container-v1 .left-container {
-    display: grid;
-    position: absolute !important;
-    box-sizing: border-box;
-    left: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
     background-color: white;
     z-index: 0 !important;
 }
@@ -44,16 +51,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     height: calc(100vh - 108px - 64px) !important;
     min-height: 480px !important;
     z-index: 99 !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 #bilibili-player {
     width: 100% !important;
     height: 100% !important;
+    max-width: 2450px !important;
 }
 
 #bilibili-player-placeholder {
-    width: 150% !important;
-    left: -20px !important;
+    display: none !important;
 }
 
 #bilibili-player-placeholder-bottom {
@@ -61,6 +70,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 }
 
 #bottomDiv {
+    min-width: 1130px;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
 }`, ""]);
@@ -86,16 +97,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.video-container-v1 .right-container {
-    z-index: -20;
-    margin-left: 60px !important;
+    padding-left: 60px !important;
+    margin-left: 0 !important;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
+
 
 /*去广告*/
 .video-card-ad-small {
     display: none !important;
 }
-#slide_ad{
-    display: none!important;
+
+#slide_ad {
+    display: none !important;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -170,7 +185,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.video-title {
 
 #leftDiv {
     width: 70vw;
+    min-width: 650px;
     max-width: 1550px;
+}
+
+#viewbox_report, #arc_toolbar_report, .left-container-under-player {
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 /*去广告*/
@@ -258,6 +279,31 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-sending-area:before {
 .bpx-player-control-bottom-center .bpx-player-sending-bar {
     background: rgba(20, 20, 20, 0) !important;
     box-shadow: 0 0 0 0 !important;
+}`, ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 180:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Z: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-control-wrap {
+    opacity: 0;
+    transition: opacity 1.5s;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -740,37 +786,57 @@ function script () {
       'left-container scroll-sticky').length > 0,
     () => {})
     .then(() => {
-      //改变播放器下方元素结构
-      let leftDiv = document.createElement("div");
-      leftDiv.id = "leftDiv";
-      leftDiv.appendChild(document.getElementById('viewbox_report'));
-      leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
-      leftDiv.appendChild(
-        document.getElementsByClassName('left-container-under-player')[0]);
-      
-      let bottomDiv = document.createElement("div");
-      bottomDiv.id = "bottomDiv";
-      bottomDiv.appendChild(leftDiv);
-      let right = document.getElementsByClassName(
-        'right-container is-in-large-ab')[0];
-      bottomDiv.appendChild(right);
-      right.style.zIndex = 1;
-      
-      let parentDiv = document.getElementsByClassName(
-        'left-container scroll-sticky')[0];
-      parentDiv.appendChild(bottomDiv);
-      
-      //创建弹幕栏激活区域
-      let sendingHover = document.createElement("div");
-      sendingHover.id = 'sendingHover';
-      sendingHover.appendChild(
-        document.getElementsByClassName('bpx-player-sending-area')[0]);
-      
-      document.querySelector(
-        'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]')
-        .appendChild(sendingHover);
+      run();
     });
   
+  //进度条动画显示
+  WaitUntilAction(
+    () => document.getElementsByClassName('bpx-player-control-wrap')[0],
+    (e) => {
+      (async function f () {
+        await sleep(1000);
+        e.classList.add('showAni');
+      })();
+    });
+}
+
+async function run () {
+  //改变播放器下方元素结构
+  let leftDiv = document.createElement("div");
+  leftDiv.id = "leftDiv";
+  leftDiv.appendChild(document.getElementById('viewbox_report'));
+  leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
+  leftDiv.appendChild(
+    document.getElementsByClassName('left-container-under-player')[0]);
+  
+  let bottomDiv = document.createElement("div");
+  bottomDiv.id = "bottomDiv";
+  bottomDiv.appendChild(leftDiv);
+  let right = document.getElementsByClassName(
+    'right-container is-in-large-ab')[0];
+  bottomDiv.appendChild(right);
+  
+  let parentDiv = document.getElementsByClassName(
+    'left-container scroll-sticky')[0];
+  parentDiv.appendChild(bottomDiv);
+  
+  //创建弹幕栏激活区域
+  let sendingHover = document.createElement("div");
+  sendingHover.id = 'sendingHover';
+  sendingHover.appendChild(
+    document.getElementsByClassName('bpx-player-sending-area')[0]);
+  
+  let vedio = document.querySelector(
+    'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]');
+  vedio.appendChild(sendingHover);
+  
+  //动画显示效果
+  await sleep(500);
+  right.classList.add('showAni');
+  document.getElementById('viewbox_report').classList.add('showAni');
+  document.getElementById('arc_toolbar_report').classList.add('showAni');
+  document.getElementsByClassName(
+    'left-container-under-player')[0].classList.add('showAni');
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(379);
@@ -945,19 +1011,52 @@ var src_css_update_0 = injectStylesIntoStyleTag_default()(node_modules_css_loade
 
        /* harmony default export */ const src_css_2 = (node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z.locals : undefined);
 
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/播放器.css
+var node_modules_css_loader_dist_cjs_js_src_css_0 = __webpack_require__(180);
+;// CONCATENATED MODULE: ./src/css/播放器.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var src_css_options_1 = {};
+
+src_css_options_1.styleTagTransform = (styleTagTransform_default());
+src_css_options_1.setAttributes = (setAttributesWithoutAttributes_default());
+
+      src_css_options_1.insert = insertBySelector_default().bind(null, "head");
+    
+src_css_options_1.domAPI = (styleDomAPI_default());
+src_css_options_1.insertStyleElement = (insertStyleElement_default());
+
+var src_css_update_1 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z, src_css_options_1);
+
+
+
+
+       /* harmony default export */ const src_css_3 = (node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z.locals : undefined);
+
 ;// CONCATENATED MODULE: ./src/index.js
 // ==UserScript==
 // @name         bilbili界面美化
+// @description  让我们给B站界面变得现代一些吧
 // @namespace    none
-// @version      1.0.2
-// @description  B站自带版式有一种古典的美，让我们给它变得现代一些吧
+// @version      1.0.3
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
-// @run-at        document-start
+// @match        *://*.bilibili.com/bangumi/*
+// @run-at       document-start
 // @grant        GM_addStyle
 // @grant        unsafeWindow
 // ==/UserScript==
+
 
 
 

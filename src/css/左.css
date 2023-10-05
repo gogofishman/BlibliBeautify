@@ -6,7 +6,13 @@
 
 #leftDiv {
     width: 70vw;
+    min-width: 650px;
     max-width: 1550px;
+}
+
+#viewbox_report, #arc_toolbar_report, .left-container-under-player {
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 /*去广告*/

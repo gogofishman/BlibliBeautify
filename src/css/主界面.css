@@ -1,15 +1,22 @@
-﻿body {
+﻿.showAni {
+    opacity: 1 !important;
+}
+
+body {
     overflow-x: hidden !important;
 }
 
+.video-container-v1 {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 2560px !important;
+    flex-wrap: wrap !important;
+}
+
 .video-container-v1 .left-container {
-    display: grid;
-    position: absolute !important;
-    box-sizing: border-box;
-    left: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
     background-color: white;
     z-index: 0 !important;
 }
@@ -25,16 +32,18 @@
     height: calc(100vh - 108px - 64px) !important;
     min-height: 480px !important;
     z-index: 99 !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 #bilibili-player {
     width: 100% !important;
     height: 100% !important;
+    max-width: 2450px !important;
 }
 
 #bilibili-player-placeholder {
-    width: 150% !important;
-    left: -20px !important;
+    display: none !important;
 }
 
 #bilibili-player-placeholder-bottom {
@@ -42,6 +51,8 @@
 }
 
 #bottomDiv {
+    min-width: 1130px;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
 }
