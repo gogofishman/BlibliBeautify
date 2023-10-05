@@ -18,7 +18,7 @@
     padding-left: 50px !important;
     padding-right: 80px !important;
     border-radius: 0 0 25px 25px !important;
-    z-index: 9999!important;
+    z-index: 9999 !important;
 }
 
 .bpx-player-video-info {
@@ -38,13 +38,20 @@
 /*变色*/
 .bpx-player-video-inputbar {
     background: rgba(20, 20, 20, 0.9) !important;
-    border: 1.5px solid rgba(251, 114, 153, 0.5) !important;
+    border: 1.5px solid rgba(251, 114, 153, 0.8) !important;
+    border-radius: 10px !important;
 }
 
 .bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-input {
     color: rgb(251, 114, 153) !important;
 }
 
-.bui-button .bui-area{
+.bui-button .bui-area {
     background-color: rgba(251, 114, 153, 0.8) !important;
+}
+
+/*全屏状态下*/
+.bpx-player-control-bottom-center .bpx-player-sending-bar {
+    background: rgba(20, 20, 20, 0) !important;
+    box-shadow: 0 0 0 0 !important;
 }

@@ -22,7 +22,7 @@
 #playerWrap {
     order: -1;
     background-color: black;
-    height: 80vh !important;
+    height: calc(100vh - 108px - 64px) !important;
     min-height: 480px !important;
     z-index: 99 !important;
 }

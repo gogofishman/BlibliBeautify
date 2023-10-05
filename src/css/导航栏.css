@@ -17,3 +17,7 @@
 .mini-header__arrow {
     color: white !important;
 }
+
+.channel-panel__item span {
+    color: inherit !important;
+}
