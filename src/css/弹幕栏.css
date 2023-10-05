@@ -13,7 +13,7 @@
 
 .bpx-player-sending-bar {
     width: 50vw !important;
-    background: rgba(20, 20, 20, 0.7) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
     box-shadow: 0 2px 8px 5px rgba(20, 20, 20, 0.5) !important;
     padding-left: 50px !important;
     padding-right: 80px !important;
