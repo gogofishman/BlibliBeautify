@@ -11,29 +11,858 @@
 // @grant        unsafeWindow
 // ==/UserScript==
 
-/*! For license information please see main.js.LICENSE.txt */
-(() => {
-  const n = {
-    257: (n, e, t) => { t.d(e, { Z: () => l }); const r = t(81); const o = t.n(r); const a = t(645); const i = t.n(a)()(o()); i.push([n.id, 'body {\n    overflow-x: hidden !important;\n}\n\n.video-container-v1 .left-container {\n    display: grid;\n    position: absolute !important;\n    box-sizing: border-box;\n    left: 0;\n    width: 100%;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: white;\n    z-index: 0 !important;\n}\n\n.bpx-player-container {\n    box-shadow: 0 0 0 !important;\n    -webkit-box-shadow: 0 0 0 !important;\n}\n\n#playerWrap {\n    order: -1;\n    background-color: black;\n    height: calc(100vh - 108px - 64px) !important;\n    min-height: 480px !important;\n    z-index: 99 !important;\n}\n\n#bilibili-player {\n    width: 100% !important;\n    height: 100% !important;\n}\n\n#bilibili-player-placeholder {\n    width: 150% !important;\n    left: -20px !important;\n}\n\n#bilibili-player-placeholder-bottom {\n    display: none !important;\n}\n\n#bottomDiv {\n    display: flex;\n    justify-content: center;\n}', '']); const l = i; },
-    818: (n, e, t) => { t.d(e, { Z: () => l }); const r = t(81); const o = t.n(r); const a = t(645); const i = t.n(a)()(o()); i.push([n.id, '.video-container-v1 .right-container {\n    z-index: -20;\n    margin-left: 60px !important;\n}\n\n/*去广告*/\n.video-card-ad-small {\n    display: none !important;\n}\n#slide_ad{\n    display: none!important;\n}', '']); const l = i; },
-    504: (n, e, t) => { t.d(e, { Z: () => l }); const r = t(81); const o = t.n(r); const a = t(645); const i = t.n(a)()(o()); i.push([n.id, '.mini-header {\n    background-color: black !important;\n}\n\n.bili-header span {\n    color: white !important;\n}\n\n.mini-header .right-entry .right-entry__outside .right-entry-icon {\n    color: white !important;\n}\n\n.download-entry {\n    display: none !important;\n}\n\n.mini-header__arrow {\n    color: white !important;\n}\n\n.channel-panel__item span {\n    color: inherit !important;\n}', '']); const l = i; },
-    208: (n, e, t) => { t.d(e, { Z: () => l }); const r = t(81); const o = t.n(r); const a = t(645); const i = t.n(a)()(o()); i.push([n.id, '.video-title {\n    font-size: 23px !important;\n    color: black !important;\n    font-weight: bold !important;\n}\n\n#leftDiv {\n    width: 70vw;\n    max-width: 1550px;\n}\n\n/*去广告*/\n.video-container-v1 #bannerAd {\n    display: none !important;\n}\n\n.reply-header .reply-notice {\n    display: none !important;\n}', '']); const l = i; },
-    746: (n, e, t) => { t.d(e, { Z: () => l }); const r = t(81); const o = t.n(r); const a = t(645); const i = t.n(a)()(o()); i.push([n.id, '.bpx-player-sending-area:before {\n    display: none !important;\n}\n\n.bpx-player-sending-area {\n    position: absolute;\n    display: flex;\n    width: 100%;\n    justify-content: center;\n    opacity: 0;\n    transition: opacity 0.5s;\n}\n\n.bpx-player-sending-bar {\n    width: 50vw !important;\n    background: rgba(20, 20, 20, 0.7) !important;\n    box-shadow: 0 2px 8px 5px rgba(20, 20, 20, 0.5) !important;\n    padding-left: 50px !important;\n    padding-right: 80px !important;\n    border-radius: 0 0 25px 25px !important;\n    z-index: 9999 !important;\n}\n\n.bpx-player-video-info {\n    color: rgb(230, 230, 230) !important;\n}\n\n#sendingHover {\n    position: absolute;\n    height: 25%;\n    width: 100%;\n}\n\n#sendingHover:hover .bpx-player-sending-area {\n    opacity: 1 !important;\n}\n\n/*变色*/\n.bpx-player-video-inputbar {\n    background: rgba(20, 20, 20, 0.9) !important;\n    border: 1.5px solid rgba(251, 114, 153, 0.8) !important;\n    border-radius: 10px !important;\n}\n\n.bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-input {\n    color: rgb(251, 114, 153) !important;\n}\n\n.bui-button .bui-area {\n    background-color: rgba(251, 114, 153, 0.8) !important;\n}\n\n/*全屏状态下*/\n.bpx-player-control-bottom-center .bpx-player-sending-bar {\n    background: rgba(20, 20, 20, 0) !important;\n    box-shadow: 0 0 0 0 !important;\n}', '']); const l = i; },
-    645: (n) => { n.exports = function (n) { const e = []; return e.toString = function () { return this.map(((e) => { let t = ''; const r = void 0 !== e[5]; return e[4] && (t += '@supports ('.concat(e[4], ') {')), e[2] && (t += '@media '.concat(e[2], ' {')), r && (t += '@layer'.concat(e[5].length > 0 ? ' '.concat(e[5]) : '', ' {')), t += n(e), r && (t += '}'), e[2] && (t += '}'), e[4] && (t += '}'), t; })).join(''); }, e.i = function (n, t, r, o, a) { typeof n === 'string' && (n = [[null, n, void 0]]); const i = {}; if (r) for (let l = 0; l < this.length; l++) { const p = this[l][0]; p != null && (i[p] = !0); } for (let d = 0; d < n.length; d++) { const s = [].concat(n[d]); r && i[s[0]] || (void 0 !== a && (void 0 === s[5] || (s[1] = '@layer'.concat(s[5].length > 0 ? ' '.concat(s[5]) : '', ' {').concat(s[1], '}')), s[5] = a), t && (s[2] ? (s[1] = '@media '.concat(s[2], ' {').concat(s[1], '}'), s[2] = t) : s[2] = t), o && (s[4] ? (s[1] = '@supports ('.concat(s[4], ') {').concat(s[1], '}'), s[4] = o) : s[4] = ''.concat(o)), e.push(s)); } }, e; }; },
-    81: (n) => { n.exports = function (n) { return n[1]; }; },
-    379: (n) => {
-      const e = []; function t(n) { for (var t = -1, r = 0; r < e.length; r++) if (e[r].identifier === n) { t = r; break; } return t; } function r(n, r) {
-        for (var a = {}, i = [], l = 0; l < n.length; l++) {
-          const p = n[l]; const d = r.base ? p[0] + r.base : p[0]; const s = a[d] || 0; const c = ''.concat(d, ' ').concat(s); a[d] = s + 1; const u = t(c); const m = {
-            css: p[1], media: p[2], sourceMap: p[3], supports: p[4], layer: p[5],
-          }; if (u !== -1)e[u].references++, e[u].updater(m); else { const b = o(m, r); r.byIndex = l, e.splice(l, 0, { identifier: c, updater: b, references: 1 }); }i.push(c);
-        } return i;
-      } function o(n, e) { const t = e.domAPI(e); return t.update(n), function (e) { if (e) { if (e.css === n.css && e.media === n.media && e.sourceMap === n.sourceMap && e.supports === n.supports && e.layer === n.layer) return; t.update(n = e); } else t.remove(); }; }n.exports = function (n, o) { let a = r(n = n || [], o = o || {}); return function (n) { n = n || []; for (let i = 0; i < a.length; i++) { const l = t(a[i]); e[l].references--; } for (var p = r(n, o), d = 0; d < a.length; d++) { const s = t(a[d]); e[s].references === 0 && (e[s].updater(), e.splice(s, 1)); }a = p; }; };
-    },
-    569: (n) => { const e = {}; n.exports = function (n, t) { const r = (function (n) { if (void 0 === e[n]) { let t = document.querySelector(n); if (window.HTMLIFrameElement && t instanceof window.HTMLIFrameElement) try { t = t.contentDocument.head; } catch (n) { t = null; }e[n] = t; } return e[n]; }(n)); if (!r) throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."); r.appendChild(t); }; },
-    216: (n) => { n.exports = function (n) { const e = document.createElement('style'); return n.setAttributes(e, n.attributes), n.insert(e, n.options), e; }; },
-    565: (n, e, t) => { n.exports = function (n) { const e = t.nc; e && n.setAttribute('nonce', e); }; },
-    795: (n) => { n.exports = function (n) { if (typeof document === 'undefined') return { update() {}, remove() {} }; const e = n.insertStyleElement(n); return { update(t) { !(function (n, e, t) { let r = ''; t.supports && (r += '@supports ('.concat(t.supports, ') {')), t.media && (r += '@media '.concat(t.media, ' {')); const o = void 0 !== t.layer; o && (r += '@layer'.concat(t.layer.length > 0 ? ' '.concat(t.layer) : '', ' {')), r += t.css, o && (r += '}'), t.media && (r += '}'), t.supports && (r += '}'); const a = t.sourceMap; a && typeof btoa !== 'undefined' && (r += '\n/*# sourceMappingURL=data:application/json;base64,'.concat(btoa(unescape(encodeURIComponent(JSON.stringify(a)))), ' */')), e.styleTagTransform(r, n, e.options); }(e, n, t)); }, remove() { !(function (n) { if (n.parentNode === null) return !1; n.parentNode.removeChild(n); }(e)); } }; }; },
-    589: (n) => { n.exports = function (n, e) { if (e.styleSheet)e.styleSheet.cssText = n; else { for (;e.firstChild;)e.removeChild(e.firstChild); e.appendChild(document.createTextNode(n)); } }; },
-  }; const e = {}; function t(r) { const o = e[r]; if (void 0 !== o) return o.exports; const a = e[r] = { id: r, exports: {} }; return n[r](a, a.exports, t), a.exports; }t.n = (n) => { const e = n && n.__esModule ? () => n.default : () => n; return t.d(e, { a: e }), e; }, t.d = (n, e) => { for (const r in e)t.o(e, r) && !t.o(n, r) && Object.defineProperty(n, r, { enumerable: !0, get: e[r] }); }, t.o = (n, e) => Object.prototype.hasOwnProperty.call(n, e), t.nc = void 0, (() => { function n(n) { return new Promise(((e) => setTimeout(e, n))); } const e = t(379); const r = t.n(e); const o = t(795); const a = t.n(o); const i = t(569); const l = t.n(i); const p = t(565); const d = t.n(p); const s = t(216); const c = t.n(s); const u = t(589); const m = t.n(u); const b = t(257); const f = {}; f.styleTagTransform = m(), f.setAttributes = d(), f.insert = l().bind(null, 'head'), f.domAPI = a(), f.insertStyleElement = c(), r()(b.Z, f), b.Z && b.Z.locals && b.Z.locals; const h = t(746); const y = {}; y.styleTagTransform = m(), y.setAttributes = d(), y.insert = l().bind(null, 'head'), y.domAPI = a(), y.insertStyleElement = c(), r()(h.Z, y), h.Z && h.Z.locals && h.Z.locals; const v = t(818); const g = {}; g.styleTagTransform = m(), g.setAttributes = d(), g.insert = l().bind(null, 'head'), g.domAPI = a(), g.insertStyleElement = c(), r()(v.Z, g), v.Z && v.Z.locals && v.Z.locals; const x = t(504); const w = {}; w.styleTagTransform = m(), w.setAttributes = d(), w.insert = l().bind(null, 'head'), w.domAPI = a(), w.insertStyleElement = c(), r()(x.Z, w), x.Z && x.Z.locals && x.Z.locals; const Z = t(208); const C = {}; C.styleTagTransform = m(), C.setAttributes = d(), C.insert = l().bind(null, 'head'), C.domAPI = a(), C.insertStyleElement = c(), r()(Z.Z, C), Z.Z && Z.Z.locals && Z.Z.locals, window === window.parent && ('加载脚本', console.log('[B站美化] - 加载脚本'), window.onload = function () { unsafeWindow.originSetSize = () => {}, unsafeWindow.setSize = () => {}, (async function (e, t = ((n) => n.remove()), r = 1, o = 50, a = 1e4) { let i = 0; let l = 0; const p = a / o; try { for (;i <= p;) { i++, await n(o); const a = e(); if (a) { if (t(a), l < r) break; l++; } } } catch (n) { console.log('WaitUntilAction错误：', n); } }((() => document.getElementsByClassName('left-container scroll-sticky').length > 0), (() => {}))).then((() => { const n = document.createElement('div'); n.id = 'leftDiv', n.appendChild(document.getElementById('viewbox_report')), n.appendChild(document.getElementById('arc_toolbar_report')), n.appendChild(document.getElementsByClassName('left-container-under-player')[0]); const e = document.createElement('div'); e.id = 'bottomDiv', e.appendChild(n); const t = document.getElementsByClassName('right-container is-in-large-ab')[0]; e.appendChild(t), t.style.zIndex = 1, document.getElementsByClassName('left-container scroll-sticky')[0].appendChild(e); const r = document.createElement('div'); r.id = 'sendingHover', r.appendChild(document.getElementsByClassName('bpx-player-sending-area')[0]), document.querySelector('div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]').appendChild(r); })); }); })();
-})();
+/** *** */ (() => { // webpackBootstrap
+/** *** */
+
+  /** *** */ const __webpack_modules__ = ({
+
+    /***/ 257:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `body {
+    overflow-x: hidden !important;
+}
+
+.video-container-v1 .left-container {
+    display: grid;
+    position: absolute !important;
+    box-sizing: border-box;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    z-index: 0 !important;
+}
+
+.bpx-player-container {
+    box-shadow: 0 0 0 !important;
+    -webkit-box-shadow: 0 0 0 !important;
+}
+
+#playerWrap {
+    order: -1;
+    background-color: black;
+    height: calc(100vh - 108px - 64px) !important;
+    min-height: 480px !important;
+    z-index: 99 !important;
+}
+
+#bilibili-player {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#bilibili-player-placeholder {
+    width: 150% !important;
+    left: -20px !important;
+}
+
+#bilibili-player-placeholder-bottom {
+    display: none !important;
+}
+
+#bottomDiv {
+    display: flex;
+    justify-content: center;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 818:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.video-container-v1 .right-container {
+    z-index: -20;
+    margin-left: 60px !important;
+}
+
+/*去广告*/
+.video-card-ad-small {
+    display: none !important;
+}
+#slide_ad{
+    display: none!important;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 504:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.mini-header {
+    background-color: black !important;
+}
+
+.bili-header span {
+    color: white !important;
+}
+
+.mini-header .right-entry .right-entry__outside .right-entry-icon {
+    color: white !important;
+}
+
+.download-entry {
+    display: none !important;
+}
+
+.mini-header__arrow {
+    color: white !important;
+}
+
+.channel-panel__item span {
+    color: inherit !important;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 208:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.video-title {
+    font-size: 23px !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+#leftDiv {
+    width: 70vw;
+    max-width: 1550px;
+}
+
+/*去广告*/
+.video-container-v1 #bannerAd {
+    display: none !important;
+}
+
+.reply-header .reply-notice {
+    display: none !important;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 746:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-sending-area:before {
+    display: none !important;
+}
+
+.bpx-player-sending-area {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.bpx-player-sending-bar {
+    width: 50vw !important;
+    background: rgba(20, 20, 20, 0.7) !important;
+    box-shadow: 0 2px 8px 5px rgba(20, 20, 20, 0.5) !important;
+    padding-left: 50px !important;
+    padding-right: 80px !important;
+    border-radius: 0 0 25px 25px !important;
+    z-index: 9999 !important;
+}
+
+.bpx-player-video-info {
+    color: rgb(230, 230, 230) !important;
+}
+
+#sendingHover {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+}
+
+#sendingHover:hover .bpx-player-sending-area {
+    opacity: 1 !important;
+}
+
+/*变色*/
+.bpx-player-video-inputbar {
+    background: rgba(20, 20, 20, 0.9) !important;
+    border: 1.5px solid rgba(251, 114, 153, 0.8) !important;
+    border-radius: 10px !important;
+}
+
+.bpx-player-sending-bar .bpx-player-video-inputbar .bpx-player-dm-input {
+    color: rgb(251, 114, 153) !important;
+}
+
+.bui-button .bui-area {
+    background-color: rgba(251, 114, 153, 0.8) !important;
+}
+
+.bpx-player-control-bottom-center .bpx-player-sending-bar {
+    background: rgba(20, 20, 20, 0) !important;
+    box-shadow: 0 0 0 0 !important;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 645:
+    /***/ ((module) => {
+      /*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+      module.exports = function (cssWithMappingToString) {
+        const list = [];
+
+        // return the list of modules as css string
+        list.toString = function toString() {
+          return this.map((item) => {
+            let content = '';
+            const needLayer = typeof item[5] !== 'undefined';
+            if (item[4]) {
+              content += '@supports ('.concat(item[4], ') {');
+            }
+            if (item[2]) {
+              content += '@media '.concat(item[2], ' {');
+            }
+            if (needLayer) {
+              content += '@layer'.concat(item[5].length > 0 ? ' '.concat(item[5]) : '', ' {');
+            }
+            content += cssWithMappingToString(item);
+            if (needLayer) {
+              content += '}';
+            }
+            if (item[2]) {
+              content += '}';
+            }
+            if (item[4]) {
+              content += '}';
+            }
+            return content;
+          }).join('');
+        };
+
+        // import a list of modules into the list
+        list.i = function i(modules, media, dedupe, supports, layer) {
+          if (typeof modules === 'string') {
+            modules = [[null, modules, undefined]];
+          }
+          const alreadyImportedModules = {};
+          if (dedupe) {
+            for (let k = 0; k < this.length; k++) {
+              const id = this[k][0];
+              if (id != null) {
+                alreadyImportedModules[id] = true;
+              }
+            }
+          }
+          for (let _k = 0; _k < modules.length; _k++) {
+            const item = [].concat(modules[_k]);
+            if (dedupe && alreadyImportedModules[item[0]]) {
+              continue;
+            }
+            if (typeof layer !== 'undefined') {
+              if (typeof item[5] === 'undefined') {
+                item[5] = layer;
+              } else {
+                item[1] = '@layer'.concat(item[5].length > 0 ? ' '.concat(item[5]) : '', ' {').concat(item[1], '}');
+                item[5] = layer;
+              }
+            }
+            if (media) {
+              if (!item[2]) {
+                item[2] = media;
+              } else {
+                item[1] = '@media '.concat(item[2], ' {').concat(item[1], '}');
+                item[2] = media;
+              }
+            }
+            if (supports) {
+              if (!item[4]) {
+                item[4] = ''.concat(supports);
+              } else {
+                item[1] = '@supports ('.concat(item[4], ') {').concat(item[1], '}');
+                item[4] = supports;
+              }
+            }
+            list.push(item);
+          }
+        };
+        return list;
+      };
+      /***/ }),
+
+    /***/ 81:
+    /***/ ((module) => {
+      module.exports = function (i) {
+        return i[1];
+      };
+      /***/ }),
+
+    /***/ 379:
+    /***/ ((module) => {
+      const stylesInDOM = [];
+      function getIndexByIdentifier(identifier) {
+        let result = -1;
+        for (let i = 0; i < stylesInDOM.length; i++) {
+          if (stylesInDOM[i].identifier === identifier) {
+            result = i;
+            break;
+          }
+        }
+        return result;
+      }
+      function modulesToDom(list, options) {
+        const idCountMap = {};
+        const identifiers = [];
+        for (let i = 0; i < list.length; i++) {
+          const item = list[i];
+          const id = options.base ? item[0] + options.base : item[0];
+          const count = idCountMap[id] || 0;
+          const identifier = ''.concat(id, ' ').concat(count);
+          idCountMap[id] = count + 1;
+          const indexByIdentifier = getIndexByIdentifier(identifier);
+          const obj = {
+            css: item[1],
+            media: item[2],
+            sourceMap: item[3],
+            supports: item[4],
+            layer: item[5],
+          };
+          if (indexByIdentifier !== -1) {
+            stylesInDOM[indexByIdentifier].references++;
+            stylesInDOM[indexByIdentifier].updater(obj);
+          } else {
+            const updater = addElementStyle(obj, options);
+            options.byIndex = i;
+            stylesInDOM.splice(i, 0, {
+              identifier,
+              updater,
+              references: 1,
+            });
+          }
+          identifiers.push(identifier);
+        }
+        return identifiers;
+      }
+      function addElementStyle(obj, options) {
+        const api = options.domAPI(options);
+        api.update(obj);
+        const updater = function updater(newObj) {
+          if (newObj) {
+            if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+              return;
+            }
+            api.update(obj = newObj);
+          } else {
+            api.remove();
+          }
+        };
+        return updater;
+      }
+      module.exports = function (list, options) {
+        options = options || {};
+        list = list || [];
+        let lastIdentifiers = modulesToDom(list, options);
+        return function update(newList) {
+          newList = newList || [];
+          for (let i = 0; i < lastIdentifiers.length; i++) {
+            const identifier = lastIdentifiers[i];
+            const index = getIndexByIdentifier(identifier);
+            stylesInDOM[index].references--;
+          }
+          const newLastIdentifiers = modulesToDom(newList, options);
+          for (let _i = 0; _i < lastIdentifiers.length; _i++) {
+            const _identifier = lastIdentifiers[_i];
+            const _index = getIndexByIdentifier(_identifier);
+            if (stylesInDOM[_index].references === 0) {
+              stylesInDOM[_index].updater();
+              stylesInDOM.splice(_index, 1);
+            }
+          }
+          lastIdentifiers = newLastIdentifiers;
+        };
+      };
+      /***/ }),
+
+    /***/ 569:
+    /***/ ((module) => {
+      const memo = {};
+
+      /* istanbul ignore next  */
+      function getTarget(target) {
+        if (typeof memo[target] === 'undefined') {
+          let styleTarget = document.querySelector(target);
+
+          // Special case to return head of iframe instead of iframe itself
+          if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+            try {
+              // This will throw an exception if access to iframe is blocked
+              // due to cross-origin restrictions
+              styleTarget = styleTarget.contentDocument.head;
+            } catch (e) {
+              // istanbul ignore next
+              styleTarget = null;
+            }
+          }
+          memo[target] = styleTarget;
+        }
+        return memo[target];
+      }
+
+      /* istanbul ignore next  */
+      function insertBySelector(insert, style) {
+        const target = getTarget(insert);
+        if (!target) {
+          throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+        }
+        target.appendChild(style);
+      }
+      module.exports = insertBySelector;
+      /***/ }),
+
+    /***/ 216:
+    /***/ ((module) => {
+      /* istanbul ignore next  */
+      function insertStyleElement(options) {
+        const element = document.createElement('style');
+        options.setAttributes(element, options.attributes);
+        options.insert(element, options.options);
+        return element;
+      }
+      module.exports = insertStyleElement;
+      /***/ }),
+
+    /***/ 565:
+    /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+      /* istanbul ignore next  */
+      function setAttributesWithoutAttributes(styleElement) {
+        const nonce = true ? __webpack_require__.nc : 0;
+        if (nonce) {
+          styleElement.setAttribute('nonce', nonce);
+        }
+      }
+      module.exports = setAttributesWithoutAttributes;
+      /***/ }),
+
+    /***/ 795:
+    /***/ ((module) => {
+      /* istanbul ignore next  */
+      function apply(styleElement, options, obj) {
+        let css = '';
+        if (obj.supports) {
+          css += '@supports ('.concat(obj.supports, ') {');
+        }
+        if (obj.media) {
+          css += '@media '.concat(obj.media, ' {');
+        }
+        const needLayer = typeof obj.layer !== 'undefined';
+        if (needLayer) {
+          css += '@layer'.concat(obj.layer.length > 0 ? ' '.concat(obj.layer) : '', ' {');
+        }
+        css += obj.css;
+        if (needLayer) {
+          css += '}';
+        }
+        if (obj.media) {
+          css += '}';
+        }
+        if (obj.supports) {
+          css += '}';
+        }
+        const { sourceMap } = obj;
+        if (sourceMap && typeof btoa !== 'undefined') {
+          css += '\n/*# sourceMappingURL=data:application/json;base64,'.concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), ' */');
+        }
+
+        // For old IE
+        /* istanbul ignore if  */
+        options.styleTagTransform(css, styleElement, options.options);
+      }
+      function removeStyleElement(styleElement) {
+        // istanbul ignore if
+        if (styleElement.parentNode === null) {
+          return false;
+        }
+        styleElement.parentNode.removeChild(styleElement);
+      }
+
+      /* istanbul ignore next  */
+      function domAPI(options) {
+        if (typeof document === 'undefined') {
+          return {
+            update: function update() {},
+            remove: function remove() {},
+          };
+        }
+        const styleElement = options.insertStyleElement(options);
+        return {
+          update: function update(obj) {
+            apply(styleElement, options, obj);
+          },
+          remove: function remove() {
+            removeStyleElement(styleElement);
+          },
+        };
+      }
+      module.exports = domAPI;
+      /***/ }),
+
+    /***/ 589:
+    /***/ ((module) => {
+      /* istanbul ignore next  */
+      function styleTagTransform(css, styleElement) {
+        if (styleElement.styleSheet) {
+          styleElement.styleSheet.cssText = css;
+        } else {
+          while (styleElement.firstChild) {
+            styleElement.removeChild(styleElement.firstChild);
+          }
+          styleElement.appendChild(document.createTextNode(css));
+        }
+      }
+      module.exports = styleTagTransform;
+      /***/ }),
+
+    /** *** */ });
+  /** ********************************************************************* */
+  /** *** */ // The module cache
+  /** *** */ const __webpack_module_cache__ = {};
+  /** *** */
+  /** *** */ // The require function
+  /** *** */ function __webpack_require__(moduleId) {
+    /** *** */ // Check if module is in cache
+    /** *** */ const cachedModule = __webpack_module_cache__[moduleId];
+    /** *** */ if (cachedModule !== undefined) {
+      /** *** */ return cachedModule.exports;
+      /** *** */ }
+    /** *** */ // Create a new module (and put it into the cache)
+    /** *** */ const module = __webpack_module_cache__[moduleId] = {
+      /** *** */ id: moduleId,
+      /** *** */ // no module.loaded needed
+      /** *** */ exports: {},
+      /** *** */ };
+    /** *** */
+    /** *** */ // Execute the module function
+    /** *** */ __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+    /** *** */
+    /** *** */ // Return the exports of the module
+    /** *** */ return module.exports;
+    /** *** */ }
+  /** *** */
+  /** ********************************************************************* */
+  /** *** */ /* webpack/runtime/compat get default export */
+  /** *** */ (() => {
+    /** *** */ // getDefaultExport function for compatibility with non-harmony modules
+    /** *** */ __webpack_require__.n = (module) => {
+      /** *** */ const getter = module && module.__esModule
+      /** *** */ ? () => (module.default)
+      /** *** */ : () => (module);
+      /** *** */ __webpack_require__.d(getter, { a: getter });
+      /** *** */ return getter;
+      /** *** */ };
+    /** *** */ })();
+  /** *** */
+  /** *** */ /* webpack/runtime/define property getters */
+  /** *** */ (() => {
+    /** *** */ // define getter functions for harmony exports
+    /** *** */ __webpack_require__.d = (exports, definition) => {
+      /** *** */ for (const key in definition) {
+        /** *** */ if (__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+          /** *** */ Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+          /** *** */ }
+        /** *** */ }
+      /** *** */ };
+    /** *** */ })();
+  /** *** */
+  /** *** */ /* webpack/runtime/hasOwnProperty shorthand */
+  /** *** */ (() => {
+    /** *** */ __webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop));
+    /** *** */ })();
+  /** *** */
+  /** *** */ /* webpack/runtime/nonce */
+  /** *** */ (() => {
+    /** *** */ __webpack_require__.nc = undefined;
+    /** *** */ })();
+  /** *** */
+  /** ********************************************************************* */
+  const __webpack_exports__ = {};
+  // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+  (() => {
+    // CONCATENATED MODULE: ./src/func.js
+    function Print(text) {
+      console.log(`[B站美化] - ${text}`);
+    }
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    /**
+ * @param {function} element 返回指定元素的函数
+ * @param {function} action 执行动作,参数为element得到的元素,默认remove
+ * @param {number} num action执行次数，默认1次，-1为不限定次数直到超时才停止
+ * @param {number} step 每次检查间隔时间 ms
+ * @param {number} timeOut 超时时间 ms
+ * @returns {Promise<void>}
+ * @constructor
+ */
+    async function WaitUntilAction(
+      element,
+      action = (element) => element.remove(),
+      num = 1,
+      step = 50,
+      timeOut = 1000 * 10,
+    ) {
+      let count = 0;
+      let _num = 0;
+      const outCount = timeOut / step;
+
+      try {
+        while (count <= outCount) {
+          count++;
+          await sleep(step);
+
+          const _c = element();
+          if (_c) {
+            // 执行动作
+            action(_c);
+            if (_num < num) {
+              break;
+            }
+            _num++;
+          }
+        }
+      } catch (e) {
+        console.log('WaitUntilAction错误：', e);
+      }
+    }
+    // CONCATENATED MODULE: ./src/script.js
+
+    function script() {
+      unsafeWindow.originSetSize = () => {};
+      unsafeWindow.setSize = () => {};
+
+      WaitUntilAction(
+        () => document.getElementsByClassName(
+          'left-container scroll-sticky',
+        ).length > 0,
+        () => {},
+      )
+        .then(() => {
+          const leftDiv = document.createElement('div');
+          leftDiv.id = 'leftDiv';
+          leftDiv.appendChild(document.getElementById('viewbox_report'));
+          leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
+          leftDiv.appendChild(
+            document.getElementsByClassName('left-container-under-player')[0],
+          );
+
+          const bottomDiv = document.createElement('div');
+          bottomDiv.id = 'bottomDiv';
+          bottomDiv.appendChild(leftDiv);
+          const right = document.getElementsByClassName(
+            'right-container is-in-large-ab',
+          )[0];
+          bottomDiv.appendChild(right);
+          right.style.zIndex = 1;
+
+          const parentDiv = document.getElementsByClassName(
+            'left-container scroll-sticky',
+          )[0];
+          parentDiv.appendChild(bottomDiv);
+
+          const sendingHover = document.createElement('div');
+          sendingHover.id = 'sendingHover';
+          sendingHover.appendChild(
+            document.getElementsByClassName('bpx-player-sending-area')[0],
+          );
+
+          document.querySelector(
+            'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]',
+          )
+            .appendChild(sendingHover);
+        });
+    }
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+    const injectStylesIntoStyleTag = __webpack_require__(379);
+    const injectStylesIntoStyleTag_default = /* #__PURE__ */__webpack_require__.n(injectStylesIntoStyleTag);
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+    const styleDomAPI = __webpack_require__(795);
+    const styleDomAPI_default = /* #__PURE__ */__webpack_require__.n(styleDomAPI);
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+    const insertBySelector = __webpack_require__(569);
+    const insertBySelector_default = /* #__PURE__ */__webpack_require__.n(insertBySelector);
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+    const setAttributesWithoutAttributes = __webpack_require__(565);
+    const setAttributesWithoutAttributes_default = /* #__PURE__ */__webpack_require__.n(setAttributesWithoutAttributes);
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+    const insertStyleElement = __webpack_require__(216);
+    const insertStyleElement_default = /* #__PURE__ */__webpack_require__.n(insertStyleElement);
+    // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+    const styleTagTransform = __webpack_require__(589);
+    const styleTagTransform_default = /* #__PURE__ */__webpack_require__.n(styleTagTransform);
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/主界面.css
+    const _ = __webpack_require__(257);
+    // CONCATENATED MODULE: ./src/css/主界面.css
+
+    const options = {};
+
+    options.styleTagTransform = (styleTagTransform_default());
+    options.setAttributes = (setAttributesWithoutAttributes_default());
+
+    options.insert = insertBySelector_default().bind(null, 'head');
+
+    options.domAPI = (styleDomAPI_default());
+    options.insertStyleElement = (insertStyleElement_default());
+
+    const update = injectStylesIntoStyleTag_default()(_/* default */.Z, options);
+
+    /* harmony default export */ const css_ = (_/* default */.Z && _/* default */.Z.locals ? _/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/弹幕栏.css
+    const cjs_js_src_css_ = __webpack_require__(746);
+    // CONCATENATED MODULE: ./src/css/弹幕栏.css
+
+    const _options = {};
+
+    _options.styleTagTransform = (styleTagTransform_default());
+    _options.setAttributes = (setAttributesWithoutAttributes_default());
+
+    _options.insert = insertBySelector_default().bind(null, 'head');
+
+    _options.domAPI = (styleDomAPI_default());
+    _options.insertStyleElement = (insertStyleElement_default());
+
+    const _update = injectStylesIntoStyleTag_default()(cjs_js_src_css_/* default */.Z, _options);
+
+    /* harmony default export */ const src_css_ = (cjs_js_src_css_/* default */.Z && cjs_js_src_css_/* default */.Z.locals ? cjs_js_src_css_/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/右.css
+    const dist_cjs_js_src_css_ = __webpack_require__(818);
+    // CONCATENATED MODULE: ./src/css/右.css
+
+    const css_options = {};
+
+    css_options.styleTagTransform = (styleTagTransform_default());
+    css_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+    css_options.insert = insertBySelector_default().bind(null, 'head');
+
+    css_options.domAPI = (styleDomAPI_default());
+    css_options.insertStyleElement = (insertStyleElement_default());
+
+    const css_update = injectStylesIntoStyleTag_default()(dist_cjs_js_src_css_/* default */.Z, css_options);
+
+    /* harmony default export */ const src_css_0 = (dist_cjs_js_src_css_/* default */.Z && dist_cjs_js_src_css_/* default */.Z.locals ? dist_cjs_js_src_css_/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/导航栏.css
+    const css_loader_dist_cjs_js_src_css_ = __webpack_require__(504);
+    // CONCATENATED MODULE: ./src/css/导航栏.css
+
+    const src_css_options = {};
+
+    src_css_options.styleTagTransform = (styleTagTransform_default());
+    src_css_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options.domAPI = (styleDomAPI_default());
+    src_css_options.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update = injectStylesIntoStyleTag_default()(css_loader_dist_cjs_js_src_css_/* default */.Z, src_css_options);
+
+    /* harmony default export */ const src_css_1 = (css_loader_dist_cjs_js_src_css_/* default */.Z && css_loader_dist_cjs_js_src_css_/* default */.Z.locals ? css_loader_dist_cjs_js_src_css_/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/左.css
+    const node_modules_css_loader_dist_cjs_js_src_css_ = __webpack_require__(208);
+    // CONCATENATED MODULE: ./src/css/左.css
+
+    const src_css_options_0 = {};
+
+    src_css_options_0.styleTagTransform = (styleTagTransform_default());
+    src_css_options_0.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_0.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_0.domAPI = (styleDomAPI_default());
+    src_css_options_0.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_0 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z, src_css_options_0);
+
+    /* harmony default export */ const src_css_2 = (node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_/* default */.Z.locals : undefined);
+
+    // CONCATENATED MODULE: ./src/index.js
+    // ==UserScript==
+    // @name         bilbili界面美化
+    // @namespace    none
+    // @version      1.0.2
+    // @author       gogofishman
+    // @license      MIT
+    // @match        *://*.bilibili.com/video/*
+    // @run-at        document-start
+    // @grant        GM_addStyle
+    // @grant        unsafeWindow
+    // ==/UserScript==
+
+    // 不加载iframe
+    if (window === window.parent) {
+      Print('加载脚本');
+
+      window.onload = script;
+    }
+  })();
+/** *** */ })();
