@@ -11,6 +11,7 @@ body {
     margin: 0 !important;
     max-width: 2560px !important;
     flex-wrap: wrap !important;
+    position: static!important;
 }
 
 .video-container-v1 .left-container {

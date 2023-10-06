@@ -6,8 +6,7 @@ export function script () {
   
   //等到第二次加载完app
   WaitUntilAction(
-    () => document.getElementsByClassName(
-      'left-container scroll-sticky').length > 0,
+    () => document.getElementById('nav-searchform'),
     () => {})
     .then(() => {
       run();
@@ -25,40 +24,64 @@ export function script () {
 }
 
 async function run () {
-  //改变播放器下方元素结构
-  let leftDiv = document.createElement("div");
-  leftDiv.id = "leftDiv";
-  leftDiv.appendChild(document.getElementById('viewbox_report'));
-  leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
-  leftDiv.appendChild(
-    document.getElementsByClassName('left-container-under-player')[0]);
   
-  let bottomDiv = document.createElement("div");
-  bottomDiv.id = "bottomDiv";
-  bottomDiv.appendChild(leftDiv);
-  let right = document.getElementsByClassName(
-    'right-container is-in-large-ab')[0];
-  bottomDiv.appendChild(right);
+  //判断当前站点
+  let url = document.querySelector('meta[property="og:url"]').content;
+  const regex = new RegExp("www.bilibili.com\\/(?<type>.*?)\\/");
+  let url_type = '';
+  if (regex.exec(url)) {
+    url_type = regex.exec(url).groups['type'];
+  }
   
-  let parentDiv = document.getElementsByClassName(
-    'left-container scroll-sticky')[0];
-  parentDiv.appendChild(bottomDiv);
+  //视频站点
+  if (url_type === 'video') {
+    //改变播放器下方元素结构
+    let leftDiv = document.createElement("div");
+    leftDiv.id = "leftDiv";
+    leftDiv.appendChild(document.getElementById('viewbox_report'));
+    leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
+    leftDiv.appendChild(
+      document.getElementsByClassName('left-container-under-player')[0]);
+    
+    let bottomDiv = document.createElement("div");
+    bottomDiv.id = "bottomDiv";
+    bottomDiv.appendChild(leftDiv);
+    let right = document.getElementsByClassName(
+      'right-container is-in-large-ab')[0];
+    bottomDiv.appendChild(right);
+    
+    let parentDiv = document.getElementsByClassName(
+      'left-container scroll-sticky')[0];
+    parentDiv.appendChild(bottomDiv);
+    
+    //创建弹幕栏激活区域
+    let sendingHover = document.createElement("div");
+    sendingHover.id = 'sendingHover';
+    sendingHover.appendChild(
+      document.getElementsByClassName('bpx-player-sending-area')[0]);
+    
+    let vedio = document.querySelector(
+      'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]');
+    vedio.appendChild(sendingHover);
+    
+    //动画显示效果
+    await sleep(500);
+    right.classList.add('showAni');
+    document.getElementById('viewbox_report').classList.add('showAni');
+    document.getElementById('arc_toolbar_report').classList.add('showAni');
+    document.getElementsByClassName(
+      'left-container-under-player')[0].classList.add('showAni');
+    
+  }
   
-  //创建弹幕栏激活区域
-  let sendingHover = document.createElement("div");
-  sendingHover.id = 'sendingHover';
-  sendingHover.appendChild(
-    document.getElementsByClassName('bpx-player-sending-area')[0]);
+  //番剧站点
+  if (url_type === 'bangumi') {
+    //动画显示效果
+    await sleep(500);
+  }
   
-  let vedio = document.querySelector(
-    'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]');
-  vedio.appendChild(sendingHover);
-  
-  //动画显示效果
-  await sleep(500);
-  right.classList.add('showAni');
-  document.getElementById('viewbox_report').classList.add('showAni');
-  document.getElementById('arc_toolbar_report').classList.add('showAni');
-  document.getElementsByClassName(
-    'left-container-under-player')[0].classList.add('showAni');
+  //通用
+  document.getElementsByClassName('center-search__bar')[0].classList.add(
+    'showAni');
+  document.querySelector('ul[class="right-entry"]').classList.add('showAni');
 }

@@ -5,6 +5,16 @@
     transition: opacity 1.5s;
 }
 
+.up-info--left .up-avatar-wrap {
+    width: 70px!important;
+    height: 70px!important;
+}
+
+.up-info--left .bili-avatar {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 
 /*去广告*/
 .video-card-ad-small {

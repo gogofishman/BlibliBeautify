@@ -30,6 +30,7 @@ body {
     margin: 0 !important;
     max-width: 2560px !important;
     flex-wrap: wrap !important;
+    position: static!important;
 }
 
 .video-container-v1 .left-container {
@@ -103,6 +104,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.video-container-v1 .right-container {
     transition: opacity 1.5s;
 }
 
+.up-info--left .up-avatar-wrap {
+    width: 70px!important;
+    height: 70px!important;
+}
+
+.up-info--left .bili-avatar {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 
 /*去广告*/
 .video-card-ad-small {
@@ -145,16 +156,75 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.mini-header {
     color: white !important;
 }
 
-.download-entry {
-    display: none !important;
-}
 
 .mini-header__arrow {
     color: white !important;
 }
 
-.channel-panel__item span {
+.v-popover.is-bottom-start span, .v-popover.is-bottom span {
     color: inherit !important;
+}
+
+/*搜索*/
+.center-search__bar, .bili-header .right-entry {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.center-search__bar > #nav-searchform {
+    border-radius: 20px !important;
+    border: 1px solid #525252 !important;
+    transition: background-color .7s !important;
+    background: #1e1e1e !important;
+}
+
+.center-search__bar > #nav-searchform:hover {
+    background: white !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-btn {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-btn:hover {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar #nav-searchform.is-actived .nav-search-content, .bili-header .center-search-container .center-search__bar #nav-searchform.is-focus .nav-search-content {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input:active {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input:focus {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input {
+    font-size: 16px !important;
+}
+
+.nav-search-btn > svg {
+    color: #525252 !important;
+}
+
+/*屏蔽不显示的*/
+.download-entry {
+    display: none !important;
+}
+
+a[href="//game.bilibili.com/platform"], a[href="//game.bilibili.com/"], a[href="//show.bilibili.com/platform/home.html?msource=pc_web"] {
+    display: none !important;
+}
+
+div[class="vip-wrap"] {
+    display: none !important;
+}
+
+.v-popover-wrap.left-loc-entry {
+    display: none !important;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -304,6 +374,14 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-control-wrap {
     opacity: 0;
     transition: opacity 1.5s;
+}
+
+.bpx-player-top-issue{
+    display: none !important;
+}
+
+div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role="button"]{
+    display: none !important;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -782,8 +860,7 @@ function script () {
   
   //等到第二次加载完app
   WaitUntilAction(
-    () => document.getElementsByClassName(
-      'left-container scroll-sticky').length > 0,
+    () => document.getElementById('nav-searchform'),
     () => {})
     .then(() => {
       run();
@@ -801,42 +878,66 @@ function script () {
 }
 
 async function run () {
-  //改变播放器下方元素结构
-  let leftDiv = document.createElement("div");
-  leftDiv.id = "leftDiv";
-  leftDiv.appendChild(document.getElementById('viewbox_report'));
-  leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
-  leftDiv.appendChild(
-    document.getElementsByClassName('left-container-under-player')[0]);
   
-  let bottomDiv = document.createElement("div");
-  bottomDiv.id = "bottomDiv";
-  bottomDiv.appendChild(leftDiv);
-  let right = document.getElementsByClassName(
-    'right-container is-in-large-ab')[0];
-  bottomDiv.appendChild(right);
+  //判断当前站点
+  let url = document.querySelector('meta[property="og:url"]').content;
+  const regex = new RegExp("www.bilibili.com\\/(?<type>.*?)\\/");
+  let url_type = '';
+  if (regex.exec(url)) {
+    url_type = regex.exec(url).groups['type'];
+  }
   
-  let parentDiv = document.getElementsByClassName(
-    'left-container scroll-sticky')[0];
-  parentDiv.appendChild(bottomDiv);
+  //视频站点
+  if (url_type === 'video') {
+    //改变播放器下方元素结构
+    let leftDiv = document.createElement("div");
+    leftDiv.id = "leftDiv";
+    leftDiv.appendChild(document.getElementById('viewbox_report'));
+    leftDiv.appendChild(document.getElementById('arc_toolbar_report'));
+    leftDiv.appendChild(
+      document.getElementsByClassName('left-container-under-player')[0]);
+    
+    let bottomDiv = document.createElement("div");
+    bottomDiv.id = "bottomDiv";
+    bottomDiv.appendChild(leftDiv);
+    let right = document.getElementsByClassName(
+      'right-container is-in-large-ab')[0];
+    bottomDiv.appendChild(right);
+    
+    let parentDiv = document.getElementsByClassName(
+      'left-container scroll-sticky')[0];
+    parentDiv.appendChild(bottomDiv);
+    
+    //创建弹幕栏激活区域
+    let sendingHover = document.createElement("div");
+    sendingHover.id = 'sendingHover';
+    sendingHover.appendChild(
+      document.getElementsByClassName('bpx-player-sending-area')[0]);
+    
+    let vedio = document.querySelector(
+      'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]');
+    vedio.appendChild(sendingHover);
+    
+    //动画显示效果
+    await sleep(500);
+    right.classList.add('showAni');
+    document.getElementById('viewbox_report').classList.add('showAni');
+    document.getElementById('arc_toolbar_report').classList.add('showAni');
+    document.getElementsByClassName(
+      'left-container-under-player')[0].classList.add('showAni');
+    
+  }
   
-  //创建弹幕栏激活区域
-  let sendingHover = document.createElement("div");
-  sendingHover.id = 'sendingHover';
-  sendingHover.appendChild(
-    document.getElementsByClassName('bpx-player-sending-area')[0]);
+  //番剧站点
+  if (url_type === 'bangumi') {
+    //动画显示效果
+    await sleep(500);
+  }
   
-  let vedio = document.querySelector(
-    'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]');
-  vedio.appendChild(sendingHover);
-  
-  //动画显示效果
-  await sleep(500);
-  right.classList.add('showAni');
-  document.getElementById('viewbox_report').classList.add('showAni');
-  document.getElementById('arc_toolbar_report').classList.add('showAni');
-  document.getElementsByClassName(
-    'left-container-under-player')[0].classList.add('showAni');
+  //通用
+  document.getElementsByClassName('center-search__bar')[0].classList.add(
+    'showAni');
+  document.querySelector('ul[class="right-entry"]').classList.add('showAni');
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(379);
@@ -1047,7 +1148,7 @@ var src_css_update_1 = injectStylesIntoStyleTag_default()(node_modules_css_loade
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧
 // @namespace    none
-// @version      1.0.3
+// @version      1.0.4
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*

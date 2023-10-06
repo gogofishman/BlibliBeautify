@@ -2,3 +2,11 @@
     opacity: 0;
     transition: opacity 1.5s;
 }
+
+.bpx-player-top-issue{
+    display: none !important;
+}
+
+div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role="button"]{
+    display: none !important;
+}

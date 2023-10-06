@@ -10,14 +10,73 @@
     color: white !important;
 }
 
-.download-entry {
-    display: none !important;
-}
 
 .mini-header__arrow {
     color: white !important;
 }
 
-.channel-panel__item span {
+.v-popover.is-bottom-start span, .v-popover.is-bottom span {
     color: inherit !important;
+}
+
+/*搜索*/
+.center-search__bar, .bili-header .right-entry {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.center-search__bar > #nav-searchform {
+    border-radius: 20px !important;
+    border: 1px solid #525252 !important;
+    transition: background-color .7s !important;
+    background: #1e1e1e !important;
+}
+
+.center-search__bar > #nav-searchform:hover {
+    background: white !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-btn {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-btn:hover {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar #nav-searchform.is-actived .nav-search-content, .bili-header .center-search-container .center-search__bar #nav-searchform.is-focus .nav-search-content {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input:active {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input:focus {
+    background: transparent !important;
+}
+
+.bili-header .center-search-container .center-search__bar .nav-search-content .nav-search-input {
+    font-size: 16px !important;
+}
+
+.nav-search-btn > svg {
+    color: #525252 !important;
+}
+
+/*屏蔽不显示的*/
+.download-entry {
+    display: none !important;
+}
+
+a[href="//game.bilibili.com/platform"], a[href="//game.bilibili.com/"], a[href="//show.bilibili.com/platform/home.html?msource=pc_web"] {
+    display: none !important;
+}
+
+div[class="vip-wrap"] {
+    display: none !important;
+}
+
+.v-popover-wrap.left-loc-entry {
+    display: none !important;
 }
