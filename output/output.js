@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         bilbili界面美化
-// @description  让我们给B站界面变得现代一些吧
+// @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
 // @version      1.1.1
 // @author       gogofishman
@@ -1345,7 +1345,7 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     // CONCATENATED MODULE: ./src/index.js
     // ==UserScript==
     // @name         bilbili界面美化
-    // @description  让我们给B站界面变得现代一些吧
+    // @description  让我们给B站界面变得现代一些吧!
     // @namespace    none
     // @version      1.1.1
     // @author       gogofishman
