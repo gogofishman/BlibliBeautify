@@ -587,7 +587,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.squirtle-controller.squirtle-pgc .squ
     height: 3px;
 }
 
-`, ""]);
+.video_playerNormal__YTwJq #bilibili-player{
+    max-width: 2450px;
+}`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1585,6 +1587,12 @@ if (window === window.parent) {
   Print('加载脚本');
   
   window.onload = script;
+}
+
+if (document.getElementById('modal-refreshsucc')){
+  document.getElementById('modal-refreshsucc').click();
+}else{
+  document.getElementById('modal-refreshfail').click();
 }
 })();
 

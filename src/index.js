@@ -37,3 +37,9 @@ if (window === window.parent) {
   
   window.onload = script;
 }
+
+if (document.getElementById('modal-refreshsucc')){
+  document.getElementById('modal-refreshsucc').click();
+}else{
+  document.getElementById('modal-refreshfail').click();
+}
