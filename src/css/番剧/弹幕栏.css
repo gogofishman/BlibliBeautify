@@ -6,3 +6,9 @@
 #__next #sendingHover:hover{
     opacity: 1 !important;
 }
+
+/*全屏状态下*/
+.squirtle-wide-screen .bpx-player-sending-bar {
+    background: rgba(20, 20, 20, 0) !important;
+    box-shadow: 0 0 0 0 !important;
+}
