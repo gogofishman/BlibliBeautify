@@ -1,0 +1,25 @@
+.bpx-player-top-wrap {
+    color: black !important;
+    position: static !important;
+    display: block !important;
+    height: 108px !important;
+    padding-top: 22px !important;
+}
+
+.bpx-player-top-mask, .bpx-player-top-follow {
+    display: none;
+}
+
+.bpx-player-top-title {
+    font-size: 23px !important;
+    color: black !important;
+    font-weight: bold !important;
+    margin: 0 0 6px !important;
+    line-height: 34px !important;
+}
+
+.bpx-player-top-wrap > .mediainfo_mediaDesc__0JJwL {
+    font-size: 13px;
+    color: #9499A0;
+    line-height: 18px;
+}

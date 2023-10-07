@@ -10,3 +10,10 @@
 div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role="button"]{
     display: none !important;
 }
+
+.bpx-player-shadow-progress-area{
+    height: 3px !important;
+}
+.bpx-player-progress-schedule-current{
+    background-color: #fb7299;
+}

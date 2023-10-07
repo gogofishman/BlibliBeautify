@@ -1,0 +1,8 @@
+#__next #sendingHover{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#__next #sendingHover:hover{
+    opacity: 1 !important;
+}

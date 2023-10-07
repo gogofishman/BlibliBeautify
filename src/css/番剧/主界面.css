@@ -1,0 +1,41 @@
+div[id="biliMainHeader"][class="z-top-container"] {
+    background-color: black !important;
+}
+
+#__next .main-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto;
+    max-width: 2560px !important;
+    flex-wrap: wrap !important;
+    position: static !important;
+}
+
+#__next .main-container > #bilibili-player-wrap:not([class="video_playerFullScreen__VWP96"]) {
+    order: -1;
+    background-color: black;
+    height: calc(100vh - 108px - 64px) !important;
+    min-height: 480px !important;
+    z-index: 99 !important;
+    box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, .5);
+    padding-right: 0 !important;
+}
+
+#__next #bilibili-player-wrap > .video_playerInner__0_RRO {
+    display: flex !important;
+    justify-content: center;
+}
+
+.navTools_floatNavExp__fCiyO{
+    display: none !important;
+}
+
+.video_playerInner__0_RRO #bilibili-player:not([class="arzeus_wrap__KPR1i"])  {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 2450px !important;
+}
+
+.main-container > #bottomDiv *{
+    box-sizing: unset;
+}

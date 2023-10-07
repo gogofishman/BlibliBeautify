@@ -67,9 +67,10 @@ body {
     z-index: 99 !important;
     display: flex !important;
     justify-content: center !important;
+    box-shadow: 3px 2px 10px 0px rgba(0,0,0,.5);
 }
 
-#bilibili-player {
+#playerWrap #bilibili-player:not([class="mode-webscreen"])  {
     width: 100% !important;
     height: 100% !important;
     max-width: 2450px !important;
@@ -373,7 +374,191 @@ div[class="vip-wrap"] {
 
 div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role="button"]{
     display: none !important;
+}
+
+.bpx-player-shadow-progress-area{
+    height: 3px !important;
+}
+.bpx-player-progress-schedule-current{
+    background-color: #fb7299;
 }`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 117:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `div[id="biliMainHeader"][class="z-top-container"] {
+    background-color: black !important;
+}
+
+#__next .main-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto;
+    max-width: 2560px !important;
+    flex-wrap: wrap !important;
+    position: static !important;
+}
+
+#__next .main-container > #bilibili-player-wrap:not([class="video_playerFullScreen__VWP96"]) {
+    order: -1;
+    background-color: black;
+    height: calc(100vh - 108px - 64px) !important;
+    min-height: 480px !important;
+    z-index: 99 !important;
+    box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, .5);
+    padding-right: 0 !important;
+}
+
+#__next #bilibili-player-wrap > .video_playerInner__0_RRO {
+    display: flex !important;
+    justify-content: center;
+}
+
+.navTools_floatNavExp__fCiyO{
+    display: none !important;
+}
+
+.video_playerInner__0_RRO #bilibili-player:not([class="arzeus_wrap__KPR1i"])  {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 2450px !important;
+}
+
+.main-container > #bottomDiv *{
+    box-sizing: unset;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 547:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.main-container .plp-r.sticky {
+    padding-top: 108px !important;
+    padding-left: 60px !important;
+}
+
+
+.vipPaybar_container__GsBut {
+    display: none;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 91:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-top-wrap {
+    color: black !important;
+    position: static !important;
+    display: block !important;
+    height: 108px !important;
+    padding-top: 22px !important;
+}
+
+.bpx-player-top-mask, .bpx-player-top-follow {
+    display: none;
+}
+
+.bpx-player-top-title {
+    font-size: 23px !important;
+    color: black !important;
+    font-weight: bold !important;
+    margin: 0 0 6px !important;
+    line-height: 34px !important;
+}
+
+.bpx-player-top-wrap > .mediainfo_mediaDesc__0JJwL {
+    font-size: 13px;
+    color: #9499A0;
+    line-height: 18px;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 123:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `#__next #sendingHover{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#__next #sendingHover:hover{
+    opacity: 1 !important;
+}`, '']);
+      // Exports
+      /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+      /***/ }),
+
+    /***/ 373:
+    /***/ ((module, __webpack_exports__, __webpack_require__) => {
+      /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+        /* harmony export */ Z: () => (__WEBPACK_DEFAULT_EXPORT__),
+        /* harmony export */ });
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(645);
+      /* harmony import */ const _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /* #__PURE__ */__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+      // Imports
+
+      const ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+      // Module
+      ___CSS_LOADER_EXPORT___.push([module.id, `.squirtle-controller.squirtle-pgc .squirtle-progress-timeline{
+    background-color: #fb7299;
+}
+
+.squirtle-controller .squirtle-progress-common.ease .squirtle-progress-bar{
+    height: 3px;
+}
+
+`, '']);
       // Exports
       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
       /***/ }),
@@ -830,6 +1015,16 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
           (async function f() {
             await sleep(1000);
             e.classList.add('showAni');
+
+            const button = document.querySelector('div[class="bpx-player-ctrl-btn bpx-player-ctrl-web"][aria-label="网页全屏"]');
+            button.addEventListener('click', () => {
+              const navigationBar = document.getElementById('biliMainHeader');
+              if (navigationBar.style.display !== 'none') {
+                navigationBar.style.display = 'none';
+              } else {
+                navigationBar.style.display = '';
+              }
+            });
           }());
         },
       );
@@ -871,7 +1066,6 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
         sendingHover.appendChild(
           document.getElementsByClassName('bpx-player-sending-area')[0],
         );
-
         const vedio = document.querySelector(
           'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]',
         );
@@ -889,6 +1083,39 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
 
       // 番剧站点
       if (url_type === 'bangumi') {
+        const leftDiv = document.createElement('div');
+        leftDiv.id = 'leftDiv';
+        leftDiv.appendChild(document.getElementsByClassName('bpx-player-top-wrap')[0]);
+        leftDiv.appendChild(document.getElementsByClassName('toolbar')[0]);
+        leftDiv.appendChild(document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0]);
+        leftDiv.appendChild(document.getElementById('comment-module'));
+
+        const bottomDiv = document.createElement('div');
+        bottomDiv.id = 'bottomDiv';
+        bottomDiv.appendChild(leftDiv);
+        const right = document.getElementsByClassName(
+          'plp-r sticky',
+        )[0];
+        bottomDiv.appendChild(right);
+
+        const parentDiv = document.getElementsByClassName('main-container')[0];
+        parentDiv.insertBefore(bottomDiv, document.getElementsByClassName('plp-l sticky')[0]);
+        const desc = document.getElementsByClassName('mediainfo_mediaDesc__0JJwL')[1];
+        document.getElementsByClassName('bpx-player-top-wrap')[0].appendChild(desc);
+
+        const sendingHover = document.createElement('div');
+        sendingHover.id = 'sendingHover';
+        sendingHover.appendChild(
+          document.getElementsByClassName('bpx-player-sending-area')[0],
+        );
+        const vedio = document.querySelector(
+          'div[class="bpx-player-primary-area"][aria-label="哔哩哔哩播放器"]',
+        );
+        vedio.appendChild(sendingHover);
+
+        // 改变部分样式
+        document.getElementsByClassName('bpx-player-top-title')[0].style.width = 'auto !important';
+
         // 动画显示效果
         await sleep(500);
       }
@@ -1025,6 +1252,96 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
 
     /* harmony default export */ const src_css_3 = (node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_0/* default */.Z.locals : undefined);
 
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/番剧/主界面.css
+    const node_modules_css_loader_dist_cjs_js_src_css_1 = __webpack_require__(117);
+    // CONCATENATED MODULE: ./src/css/番剧/主界面.css
+
+    const src_css_options_2 = {};
+
+    src_css_options_2.styleTagTransform = (styleTagTransform_default());
+    src_css_options_2.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_2.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_2.domAPI = (styleDomAPI_default());
+    src_css_options_2.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_2 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_1/* default */.Z, src_css_options_2);
+
+    /* harmony default export */ const src_css_4 = (node_modules_css_loader_dist_cjs_js_src_css_1/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_1/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_1/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/番剧/弹幕栏.css
+    const node_modules_css_loader_dist_cjs_js_src_css_2 = __webpack_require__(123);
+    // CONCATENATED MODULE: ./src/css/番剧/弹幕栏.css
+
+    const src_css_options_3 = {};
+
+    src_css_options_3.styleTagTransform = (styleTagTransform_default());
+    src_css_options_3.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_3.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_3.domAPI = (styleDomAPI_default());
+    src_css_options_3.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_3 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_2/* default */.Z, src_css_options_3);
+
+    /* harmony default export */ const src_css_5 = (node_modules_css_loader_dist_cjs_js_src_css_2/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_2/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_2/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/番剧/播放器.css
+    const node_modules_css_loader_dist_cjs_js_src_css_3 = __webpack_require__(373);
+    // CONCATENATED MODULE: ./src/css/番剧/播放器.css
+
+    const src_css_options_4 = {};
+
+    src_css_options_4.styleTagTransform = (styleTagTransform_default());
+    src_css_options_4.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_4.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_4.domAPI = (styleDomAPI_default());
+    src_css_options_4.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_4 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_3/* default */.Z, src_css_options_4);
+
+    /* harmony default export */ const src_css_6 = (node_modules_css_loader_dist_cjs_js_src_css_3/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_3/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_3/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/番剧/左.css
+    const node_modules_css_loader_dist_cjs_js_src_css_4 = __webpack_require__(91);
+    // CONCATENATED MODULE: ./src/css/番剧/左.css
+
+    const src_css_options_5 = {};
+
+    src_css_options_5.styleTagTransform = (styleTagTransform_default());
+    src_css_options_5.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_5.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_5.domAPI = (styleDomAPI_default());
+    src_css_options_5.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_5 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_4/* default */.Z, src_css_options_5);
+
+    /* harmony default export */ const src_css_7 = (node_modules_css_loader_dist_cjs_js_src_css_4/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_4/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_4/* default */.Z.locals : undefined);
+
+    // EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/css/番剧/右.css
+    const node_modules_css_loader_dist_cjs_js_src_css_5 = __webpack_require__(547);
+    // CONCATENATED MODULE: ./src/css/番剧/右.css
+
+    const src_css_options_6 = {};
+
+    src_css_options_6.styleTagTransform = (styleTagTransform_default());
+    src_css_options_6.setAttributes = (setAttributesWithoutAttributes_default());
+
+    src_css_options_6.insert = insertBySelector_default().bind(null, 'head');
+
+    src_css_options_6.domAPI = (styleDomAPI_default());
+    src_css_options_6.insertStyleElement = (insertStyleElement_default());
+
+    const src_css_update_6 = injectStylesIntoStyleTag_default()(node_modules_css_loader_dist_cjs_js_src_css_5/* default */.Z, src_css_options_6);
+
+    /* harmony default export */ const src_css_8 = (node_modules_css_loader_dist_cjs_js_src_css_5/* default */.Z && node_modules_css_loader_dist_cjs_js_src_css_5/* default */.Z.locals ? node_modules_css_loader_dist_cjs_js_src_css_5/* default */.Z.locals : undefined);
+
     // CONCATENATED MODULE: ./src/index.js
     // ==UserScript==
     // @name         bilbili界面美化
@@ -1039,6 +1356,8 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     // @grant        GM_addStyle
     // @grant        unsafeWindow
     // ==/UserScript==
+
+    // 导入vieo样式
 
     // 不加载iframe
     if (window === window.parent) {
