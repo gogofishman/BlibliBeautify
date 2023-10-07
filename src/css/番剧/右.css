@@ -1,6 +1,10 @@
 .main-container .plp-r.sticky {
     padding-top: 108px !important;
     padding-left: 60px !important;
+    left: 0 !important;
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 

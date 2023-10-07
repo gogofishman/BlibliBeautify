@@ -120,7 +120,19 @@ async function run () {
     document.getElementsByClassName('bpx-player-top-title')[0].style.width = 'auto !important';
     
     //动画显示效果
+    document.getElementsByClassName('toolbar')[0].style.display = 'flex';
+    document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].style.display = 'flex';
+    document.getElementById('comment-module').style.display = 'block';
+    document.getElementsByClassName('plp-r sticky')[0].style.display = 'block';
+    
     await sleep(500);
+    
+    document.getElementsByClassName('mediainfo_mediaDesc__0JJwL')[0].classList.add('showAni');
+    document.getElementById('player-title').classList.add('showAni');
+    document.getElementsByClassName('toolbar')[0].classList.add('showAni');
+    document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].classList.add('showAni');
+    document.getElementById('comment-module').classList.add('showAni');
+    document.getElementsByClassName('plp-r sticky')[0].classList.add('showAni');
   }
   
   //通用

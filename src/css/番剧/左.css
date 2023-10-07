@@ -23,3 +23,14 @@
     color: #9499A0;
     line-height: 18px;
 }
+
+#player-title, .mediainfo_mediaDesc__0JJwL {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.toolbar , .mediainfo_mediaInfo__Cpow4 ,#comment-module{
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}

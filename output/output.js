@@ -2,7 +2,7 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.1
+// @version      1.1.2
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
@@ -36,6 +36,10 @@
 
 body {
     overflow-x: hidden !important;
+}
+
+body.header-v3 {
+    background-color: black!important;
 }
 
 .video-container-v1 {
@@ -402,11 +406,16 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
       ___CSS_LOADER_EXPORT___.push([module.id, `div[id="biliMainHeader"][class="z-top-container"] {
     background-color: black !important;
 }
+.home-container{
+        display: flex;
+    justify-content: center;
+    background-color: black;
+}
 
 #__next .main-container {
     padding: 0 !important;
     margin: 0 !important;
-    width: auto;
+    width: 100% !important;
     max-width: 2560px !important;
     flex-wrap: wrap !important;
     position: static !important;
@@ -460,6 +469,10 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
       ___CSS_LOADER_EXPORT___.push([module.id, `.main-container .plp-r.sticky {
     padding-top: 108px !important;
     padding-left: 60px !important;
+    left: 0 !important;
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
 
@@ -507,6 +520,17 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     font-size: 13px;
     color: #9499A0;
     line-height: 18px;
+}
+
+#player-title, .mediainfo_mediaDesc__0JJwL {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.toolbar , .mediainfo_mediaInfo__Cpow4 ,#comment-module{
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
 }`, '']);
       // Exports
       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -1119,7 +1143,19 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
         document.getElementsByClassName('bpx-player-top-title')[0].style.width = 'auto !important';
 
         // 动画显示效果
+        document.getElementsByClassName('toolbar')[0].style.display = 'flex';
+        document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].style.display = 'flex';
+        document.getElementById('comment-module').style.display = 'block';
+        document.getElementsByClassName('plp-r sticky')[0].style.display = 'block';
+
         await sleep(500);
+
+        document.getElementsByClassName('mediainfo_mediaDesc__0JJwL')[0].classList.add('showAni');
+        document.getElementById('player-title').classList.add('showAni');
+        document.getElementsByClassName('toolbar')[0].classList.add('showAni');
+        document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].classList.add('showAni');
+        document.getElementById('comment-module').classList.add('showAni');
+        document.getElementsByClassName('plp-r sticky')[0].classList.add('showAni');
       }
 
       // 通用
@@ -1349,7 +1385,7 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     // @name         bilbili界面美化
     // @description  让我们给B站界面变得现代一些吧!
     // @namespace    none
-    // @version      1.1.1
+    // @version      1.1.2
     // @author       gogofishman
     // @license      MIT
     // @match        *://*.bilibili.com/video/*

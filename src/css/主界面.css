@@ -6,6 +6,10 @@ body {
     overflow-x: hidden !important;
 }
 
+body.header-v3 {
+    background-color: black!important;
+}
+
 .video-container-v1 {
     padding: 0 !important;
     margin: 0 !important;

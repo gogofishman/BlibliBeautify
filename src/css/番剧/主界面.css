@@ -1,11 +1,16 @@
 div[id="biliMainHeader"][class="z-top-container"] {
     background-color: black !important;
 }
+.home-container{
+        display: flex;
+    justify-content: center;
+    background-color: black;
+}
 
 #__next .main-container {
     padding: 0 !important;
     margin: 0 !important;
-    width: auto;
+    width: 100% !important;
     max-width: 2560px !important;
     flex-wrap: wrap !important;
     position: static !important;
