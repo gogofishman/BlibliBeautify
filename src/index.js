@@ -2,7 +2,7 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.3
+// @version      1.1.4
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
@@ -36,10 +36,4 @@ if (window === window.parent) {
   Print('加载脚本');
   
   window.onload = script;
-}
-
-if (document.getElementById('modal-refreshsucc')){
-  document.getElementById('modal-refreshsucc').click();
-}else{
-  document.getElementById('modal-refreshfail').click();
 }

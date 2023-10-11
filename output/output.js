@@ -2,7 +2,7 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.3
+// @version      1.1.4
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
@@ -39,7 +39,7 @@ body {
 }
 
 body.header-v3 {
-    background-color: black!important;
+    background-color: black !important;
 }
 
 .video-container-v1 {
@@ -47,7 +47,7 @@ body.header-v3 {
     margin: 0 !important;
     max-width: 2560px !important;
     flex-wrap: wrap !important;
-    position: static!important;
+    position: static !important;
 }
 
 .video-container-v1 .left-container {
@@ -71,10 +71,10 @@ body.header-v3 {
     z-index: 99 !important;
     display: flex !important;
     justify-content: center !important;
-    box-shadow: 3px 2px 10px 0px rgba(0,0,0,.5);
+    box-shadow: 3px 2px 10px 0px rgba(0, 0, 0, .5);
 }
 
-#playerWrap #bilibili-player:not([class="mode-webscreen"])  {
+#playerWrap #bilibili-player:not([class="mode-webscreen"]) {
     width: 100% !important;
     height: 100% !important;
     max-width: 2450px !important;
@@ -93,6 +93,29 @@ body.header-v3 {
     padding: 0 20px;
     display: flex;
     justify-content: center;
+}
+
+/*白幕*/
+#white_top{
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255 255 255));
+}
+
+#white_bottom{
+    width: 100%;
+    flex: 1;
+    background: white;
+}
+
+#white {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 100vh);
+    transition: height 1s;
 }`, '']);
       // Exports
       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -184,12 +207,19 @@ body.header-v3 {
 .center-search__bar > #nav-searchform {
     border-radius: 20px !important;
     border: 1px solid #525252 !important;
-    transition: background-color .7s !important;
+    transition: background-color .7s,border-top-color .7s,border-left-color .7s,border-right-color .7s !important;
     background: #1e1e1e !important;
 }
 
 .center-search__bar > #nav-searchform:hover {
     background: white !important;
+}
+
+.center-search__bar.is-focus > #nav-searchform {
+    opacity: 1 !important;
+    background: white !important;
+    border-radius: 20px 20px 0 0 !important;
+     border: 1px solid #ffffff !important;
 }
 
 .bili-header .center-search-container .center-search__bar .nav-search-btn {
@@ -1047,7 +1077,9 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
             await sleep(1000);
             e.classList.add('showAni');
 
-            const button = document.querySelector('div[class="bpx-player-ctrl-btn bpx-player-ctrl-web"][aria-label="网页全屏"]');
+            const button = document.querySelector(
+              'div[class="bpx-player-ctrl-btn bpx-player-ctrl-web"][aria-label="网页全屏"]',
+            );
             button.addEventListener('click', () => {
               const navigationBar = document.getElementById('biliMainHeader');
               if (navigationBar.style.display !== 'none') {
@@ -1110,15 +1142,37 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
         document.getElementsByClassName(
           'left-container-under-player',
         )[0].classList.add('showAni');
+
+        // 添加白幕
+        const white = document.createElement('div');
+        white.id = 'white';
+        document.getElementById('bottomDiv').appendChild(white);
+
+        const white_top = document.createElement('div');
+        white_top.id = 'white_top';
+        const white_bottom = document.createElement('div');
+        white_bottom.id = 'white_bottom';
+
+        white.appendChild(white_top);
+        white.appendChild(white_bottom);
+
+        window.addEventListener('scroll', () => {
+          white.style.height = `${document.body.scrollHeight - window.scrollY
+        - window.innerHeight}px`;
+        });
       }
 
       // 番剧站点
       if (url_type === 'bangumi') {
         const leftDiv = document.createElement('div');
         leftDiv.id = 'leftDiv';
-        leftDiv.appendChild(document.getElementsByClassName('bpx-player-top-wrap')[0]);
+        leftDiv.appendChild(
+          document.getElementsByClassName('bpx-player-top-wrap')[0],
+        );
         leftDiv.appendChild(document.getElementsByClassName('toolbar')[0]);
-        leftDiv.appendChild(document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0]);
+        leftDiv.appendChild(
+          document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0],
+        );
         leftDiv.appendChild(document.getElementById('comment-module'));
 
         const bottomDiv = document.createElement('div');
@@ -1130,7 +1184,10 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
         bottomDiv.appendChild(right);
 
         const parentDiv = document.getElementsByClassName('main-container')[0];
-        parentDiv.insertBefore(bottomDiv, document.getElementsByClassName('plp-l sticky')[0]);
+        parentDiv.insertBefore(
+          bottomDiv,
+          document.getElementsByClassName('plp-l sticky')[0],
+        );
         const desc = document.getElementsByClassName('mediainfo_mediaDesc__0JJwL')[1];
         document.getElementsByClassName('bpx-player-top-wrap')[0].appendChild(desc);
 
@@ -1145,28 +1202,34 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
         vedio.appendChild(sendingHover);
 
         // 改变部分样式
-        document.getElementsByClassName('bpx-player-top-title')[0].style.width = 'auto !important';
+        document.getElementsByClassName(
+          'bpx-player-top-title',
+        )[0].style.width = 'auto !important';
 
         // 动画显示效果
         document.getElementsByClassName('toolbar')[0].style.display = 'flex';
-        document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].style.display = 'flex';
+        document.getElementsByClassName(
+          'mediainfo_mediaInfo__Cpow4',
+        )[0].style.display = 'flex';
         document.getElementById('comment-module').style.display = 'block';
         document.getElementsByClassName('plp-r sticky')[0].style.display = 'block';
 
         await sleep(500);
 
-        document.getElementsByClassName('mediainfo_mediaDesc__0JJwL')[0].classList.add('showAni');
+        document.getElementsByClassName(
+          'mediainfo_mediaDesc__0JJwL',
+        )[0].classList.add('showAni');
         document.getElementById('player-title').classList.add('showAni');
         document.getElementsByClassName('toolbar')[0].classList.add('showAni');
-        document.getElementsByClassName('mediainfo_mediaInfo__Cpow4')[0].classList.add('showAni');
+        document.getElementsByClassName(
+          'mediainfo_mediaInfo__Cpow4',
+        )[0].classList.add('showAni');
         document.getElementById('comment-module').classList.add('showAni');
         document.getElementsByClassName('plp-r sticky')[0].classList.add('showAni');
       }
 
       // 通用
-      document.getElementsByClassName('center-search__bar')[0].classList.add(
-        'showAni',
-      );
+      document.getElementsByClassName('center-search__bar')[0].style.opacity = '1';
       document.querySelector('ul[class="right-entry"]').classList.add('showAni');
     }
     // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
@@ -1390,7 +1453,7 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     // @name         bilbili界面美化
     // @description  让我们给B站界面变得现代一些吧!
     // @namespace    none
-    // @version      1.1.3
+    // @version      1.1.4
     // @author       gogofishman
     // @license      MIT
     // @match        *://*.bilibili.com/video/*
@@ -1407,12 +1470,6 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
       Print('加载脚本');
 
       window.onload = script;
-    }
-
-    if (document.getElementById('modal-refreshsucc')) {
-      document.getElementById('modal-refreshsucc').click();
-    } else {
-      document.getElementById('modal-refreshfail').click();
     }
   })();
 /** *** */ })();
