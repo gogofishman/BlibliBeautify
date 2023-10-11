@@ -303,6 +303,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.video-title {
     transition: opacity 1.5s;
 }
 
+.video-ai-assistant {
+    z-index: 1 !important;
+}
+
 /*去广告*/
 .video-container-v1 #bannerAd {
     display: none !important;
