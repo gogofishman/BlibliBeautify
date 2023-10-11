@@ -590,6 +590,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bpx-player-top-wrap {
     display: none;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
+}
+
+textarea[class="reply-box-textarea"]{
+    box-sizing: border-box !important;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -619,6 +623,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#__next #sendingHover{
 
 #__next #sendingHover:hover{
     opacity: 1 !important;
+}
+
+.bpx-player-dm-setting-wrap{
+    bottom: auto !important;
+}
+
+.bpx-player-container[data-screen=full] .bpx-player-dm-setting-wrap, .bpx-player-container[data-screen=web] .bpx-player-dm-setting-wrap{
+    bottom: 63px !important;
 }
 
 /*全屏状态下*/
@@ -1658,7 +1670,7 @@ var src_css_update_6 = injectStylesIntoStyleTag_default()(node_modules_css_loade
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.4
+// @version      1.1.5
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*

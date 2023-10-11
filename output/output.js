@@ -2,7 +2,7 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.4
+// @version      1.1.5
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
@@ -569,6 +569,10 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     display: none;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
+}
+
+textarea[class="reply-box-textarea"]{
+    box-sizing: border-box !important;
 }`, '']);
       // Exports
       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -594,6 +598,14 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
 
 #__next #sendingHover:hover{
     opacity: 1 !important;
+}
+
+.bpx-player-dm-setting-wrap{
+    bottom: auto !important;
+}
+
+.bpx-player-container[data-screen=full] .bpx-player-dm-setting-wrap, .bpx-player-container[data-screen=web] .bpx-player-dm-setting-wrap{
+    bottom: 63px !important;
 }
 
 .squirtle-wide-screen .bpx-player-sending-bar {
@@ -1461,7 +1473,7 @@ div[class="bpx-player-ctrl-btn bpx-player-ctrl-wide"][aria-label="宽屏"][role=
     // @name         bilbili界面美化
     // @description  让我们给B站界面变得现代一些吧!
     // @namespace    none
-    // @version      1.1.4
+    // @version      1.1.5
     // @author       gogofishman
     // @license      MIT
     // @match        *://*.bilibili.com/video/*

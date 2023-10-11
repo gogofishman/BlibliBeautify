@@ -7,6 +7,14 @@
     opacity: 1 !important;
 }
 
+.bpx-player-dm-setting-wrap{
+    bottom: auto !important;
+}
+
+.bpx-player-container[data-screen=full] .bpx-player-dm-setting-wrap, .bpx-player-container[data-screen=web] .bpx-player-dm-setting-wrap{
+    bottom: 63px !important;
+}
+
 /*全屏状态下*/
 .squirtle-wide-screen .bpx-player-sending-bar {
     background: rgba(20, 20, 20, 0) !important;
