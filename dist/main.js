@@ -202,7 +202,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.mini-header {
 .center-search__bar > #nav-searchform {
     border-radius: 20px !important;
     border: 1px solid #525252 !important;
-    transition: background-color .7s,border-top-color .7s,border-left-color .7s,border-right-color .7s !important;
+    transition: background-color .7s, border-top-color .7s, border-left-color .7s, border-right-color .7s !important;
     background: #1e1e1e !important;
 }
 
@@ -214,7 +214,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.mini-header {
     opacity: 1 !important;
     background: white !important;
     border-radius: 20px 20px 0 0 !important;
-     border: 1px solid #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
+
+.bili-header .search-panel {
+    border-radius: 0 0 20px 20px !important;
 }
 
 .bili-header .center-search-container .center-search__bar .nav-search-btn {
