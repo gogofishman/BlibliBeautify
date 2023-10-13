@@ -4,14 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack  && cmd /c 添加油猴头部.bat && eslint --fix output/**"
+    "build": "webpack  && cmd /c 添加油猴头部.exe src/index.js dist/main.js"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-import": "^2.25.2",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
