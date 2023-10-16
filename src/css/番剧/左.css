@@ -26,13 +26,13 @@
 
 #player-title, .mediainfo_mediaDesc__0JJwL {
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .toolbar , .mediainfo_mediaInfo__Cpow4 ,#comment-module{
     display: none;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 textarea[class="reply-box-textarea"]{

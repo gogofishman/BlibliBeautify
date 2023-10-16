@@ -4,12 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack  && cmd /c 添加油猴头部.exe src/index.js dist/main.js"
-  },
-  "devDependencies": {
-    "css-loader": "^6.8.1",
-    "style-loader": "^3.3.3",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "build": "cmd /c python python/main.py src/index.js"
   }
 }

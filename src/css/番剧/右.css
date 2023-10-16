@@ -4,7 +4,7 @@
     left: 0 !important;
     display: none;
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 0.5s;
 }
 
 

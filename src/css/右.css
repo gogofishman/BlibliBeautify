@@ -2,7 +2,7 @@
     padding-left: 60px !important;
     margin-left: 0 !important;
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 0.5s;
 }
 
 .up-info--left .up-avatar-wrap {
