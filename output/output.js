@@ -2,7 +2,7 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.6
+// @version      1.1.7
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
