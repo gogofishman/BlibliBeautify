@@ -7,6 +7,7 @@
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
 // @match        *://*.bilibili.com/bangumi/*
+// @match        *://*.bilibili.com/read/*
 // @run-at       document-start
 // @grant        GM_addStyle
 // @grant        unsafeWindow
@@ -512,6 +513,16 @@ async function run() {
   if (regex.exec(url)) {
     url_type = regex.exec(url)
       .groups['type'];
+  }
+
+  //专栏站点
+  if (url_type === 'read') {
+    //删除右键复制的后缀
+    let element = document.getElementById('article-content');
+    element.addEventListener("copy", function (e) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }, true);
   }
 
   //视频站点

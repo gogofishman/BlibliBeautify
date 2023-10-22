@@ -2,11 +2,12 @@
 // @name         bilbili界面美化
 // @description  让我们给B站界面变得现代一些吧!
 // @namespace    none
-// @version      1.1.6
+// @version      1.1.7
 // @author       gogofishman
 // @license      MIT
 // @match        *://*.bilibili.com/video/*
 // @match        *://*.bilibili.com/bangumi/*
+// @match        *://*.bilibili.com/read/*
 // @run-at       document-start
 // @grant        GM_addStyle
 // @grant        unsafeWindow
@@ -65,6 +66,16 @@ async function run() {
     let url_type = '';
     if (regex.exec(url)) {
         url_type = regex.exec(url).groups['type'];
+    }
+
+    //专栏站点
+    if (url_type === 'read') {
+        //删除右键复制的后缀
+        let element = document.getElementById('article-content');
+        element.addEventListener("copy", function (e) {
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        }, true);
     }
 
     //视频站点
