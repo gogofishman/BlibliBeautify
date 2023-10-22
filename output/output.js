@@ -515,16 +515,6 @@ async function run() {
       .groups['type'];
   }
 
-  //专栏站点
-  if (url_type === 'read') {
-    //删除右键复制的后缀
-    let element = document.getElementById('article-content');
-    element.addEventListener("copy", function (e) {
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-    }, true);
-  }
-
   //视频站点
   if (url_type === 'video') {
     //改变播放器下方元素结构
@@ -662,6 +652,16 @@ async function run() {
       .classList.add('showAni');
     document.getElementsByClassName('plp-r sticky')[0].classList
       .add('showAni');
+  }
+
+  //专栏站点
+  if (url_type === 'read') {
+    //删除右键复制的后缀
+    let element = document.getElementById('article-content');
+    element.addEventListener("copy", function (e) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }, true);
   }
 
   //通用
